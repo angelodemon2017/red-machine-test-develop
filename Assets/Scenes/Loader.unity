@@ -154,6 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activityType: 1
   clickToDragDuration: 0
+  _weight: 0
+  _height: 0
 --- !u!4 &385385896
 Transform:
   m_ObjectHideFlags: 0
@@ -424,7 +426,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9898ad82df7a0c746b1677cadb3b24fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activityType: 1
   sensitivity: 100
+  defaulthPosition: {x: 0, y: 0, z: 0}
+  _weight: 0
+  _height: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

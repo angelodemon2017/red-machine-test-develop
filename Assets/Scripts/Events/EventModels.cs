@@ -20,6 +20,11 @@ namespace Events
             {
                 
             }
+
+            public struct FreeTapped : IEvent
+            {
+
+            }
         }
     }
 }

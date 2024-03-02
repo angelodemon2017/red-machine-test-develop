@@ -18,12 +18,14 @@ namespace Player
         {
             EventsController.Subscribe<EventModels.Game.NodeTapped>(this, OnNodeTapped);
             EventsController.Subscribe<EventModels.Game.PlayerFingerRemoved>(this, OnPlayerFingerRemoved);
+            EventsController.Subscribe<EventModels.Game.FreeTapped>(this, OnFreeSpaceTapped);
         }
         
         public void Unsubscribe()
         {
             EventsController.Unsubscribe<EventModels.Game.NodeTapped>(OnNodeTapped);
             EventsController.Unsubscribe<EventModels.Game.PlayerFingerRemoved>(OnPlayerFingerRemoved);
+            EventsController.Unsubscribe<EventModels.Game.FreeTapped>(OnFreeSpaceTapped);
         }
 
         private void OnNodeTapped(EventModels.Game.NodeTapped e)
@@ -34,6 +36,11 @@ namespace Player
         private void OnPlayerFingerRemoved(EventModels.Game.PlayerFingerRemoved e)
         {
             _setStateAction?.Invoke(PlayerState.None);
+        }
+
+        private void OnFreeSpaceTapped(EventModels.Game.FreeTapped e)
+        {
+            _setStateAction?.Invoke(PlayerState.Scrolling);
         }
     }
 }

@@ -90,11 +90,5 @@ namespace Player.ActionHandlers
             DragStartEvent -= dragStartEvent;
             DragEndEvent -= dragEndEvent;
         }
-
-        public void ClearEvents()
-        {
-            DragStartEvent = null;
-            DragEndEvent = null;
-        }
     }
 }
